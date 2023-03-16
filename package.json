@@ -1,0 +1,38 @@
+{
+  "name": "slide-window",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/src/index.js",
+    "format": "prettier --write --ignore-unknown .",
+    "lint": "eslint --ignore-path ./.gitignore  --ext .ts --ext .js ./src/",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf ./dist/",
+    "clean:all": "npm run clean && rm -rf node_modules",
+    "prepare": "[ \"$NODE_ENV\" = production ] && exit 0;husky install",
+    "generate-changelog": "standard-version --no-verify"
+  },
+  "keywords": [],
+  "author": "Paulo Araújo",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@types/node": "^18.14.6",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
+    "prettier": "^2.8.4",
+    "standard-version": "^9.5.0",
+    "typescript": "^4.9.5"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "*": "prettier --write --ignore-unknown .",
+  "*.ts": "eslint --ignore-path ./.gitignore  --ext .ts --ext .js --quiet --fix ./src/"
+}
